@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <title>Educultivo - Cadastro</title>
+</head>
+
+<body class="body-img">
+    <header >
+        <div class="menu-content">
+            <h1 class="logo"> Educultivo </h1>
+            <nav class="header-menu">
+                <ul class="lista-items">
+                    <li><a href="aluno.html">Voltar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p id="titulo-selecao">Cadastro do Aluno</p>
+            <br>
+            <div class="login-cadastro">
+                    <form>
+                    <p>Nome Completo</p>
+                    <input type="text" name="nome_completo" placeholder="Digite seu nome completo">
+                    <br>
+                    <p>Nome da Escola</p>
+                    <input type="text" name="nome_escola" placeholder="Digite o nome da sua escola">
+                    <br>
+                    <p>Código de Usuário</p>
+                    <input type="text" name="codigo_usuario" placeholder="Digite seu código de usuário">
+                    <br>
+                    <p>Data de Nascimento</p>
+                    <input type="date" name="data_nascimento">
+                    <br><br>
+                    <p>CPF</p>
+                    <input type="text" name="cpf" placeholder="Digite seu CPF">
+                    <br>
+                    <p>E-mail</p>
+                    <input type="email" name="email" placeholder="Digite seu e-mail">
+                    <br><br>               <p>Senha</p>
+                    <input type="password" name="senha" placeholder="Digite sua senha">             
+                    <input type="submit" name="" value="Cadastrar" id="cadastrarBtn">
+                    </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("cadastrarBtn").addEventListener("click", function() {
+            alert("Conta criada com sucesso! Retorne à página 'Acesso do Aluno''.");
+        });
+    </script>
+</body>
+</html>

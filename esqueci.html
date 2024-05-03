@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <title>Educultivo - Recuperar senha</title>
+</head>
+<body class="body-img">
+    <header>
+        <div class="menu-content">
+            <h1 class="logo"> Educultivo </h1>
+            <nav class="header-menu">
+                <ul class="lista-items">
+                    <li><a href="qualevoce.html">Voltar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p id="titulo-selecao">Esqueci minha senha</p>
+            <br><br>
+            <div class="esqueci-content">
+                <div class="login-esqueci">
+                    <img src="detetive.png" class="user-aluno" width="100" height="100" alt="">
+                    <form>
+                        <p>E-mail</p>
+                        <input type="text" name="" placeholder="Digite seu e-mail">
+                        <br>
+                        <p>Data de Nascimento</p>
+                        <input type="date" name="data_nascimento">
+                        <br><br>
+                    </form>
+                    <button class="botao-entrar" id="recuperarBtn">RECUPERAR</button>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("recuperarBtn").addEventListener("click", function() {
+            alert("E-mail de recuperação enviado com sucesso!");
+        });
+    </script>
+</body>
+</html>

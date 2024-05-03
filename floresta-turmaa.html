@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <title>Educultivo - Floresta</title>
+</head>
+    <style>
+        .overlay{
+        height: 0;
+        width: 100%;
+        background: linear-gradient(transparent, #ffffff 58%);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 0px;
+        text-align: center;
+        font-size: 18px;
+        transition: height 0.5s;
+        border-radius: 0px;
+    }
+
+    .box-area{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-gap: 0px;
+        margin-top: 0px;
+    }
+
+    .box{
+        width: 300px;
+        padding: 0px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #card-area{
+        padding: 10px 0px;
+    }
+
+    .wrapper{
+        padding: 10px 5%;
+    }
+
+    .box:hover .overlay{
+        height: 50%;
+    }
+
+    .box img{
+        width: 100%;
+        border-radius: 0px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    </style>
+<body class="body-professor">
+    <header>
+        <div class="menu-content">
+            <h1 class="logo-professor"> Educultivo </h1>
+            <nav class="header-menu">
+                <ul class="lista-items">
+                    <li><a href="minhas-disciplinas.html">Voltar</a></li>
+                    <li><a href="index.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <p id="titulo-professor2"> Floresta<br>Matematica </p>
+    <br><br>
+    <div id="card-area">
+        <div class="wrapper">
+            <div class="box-area">
+                <div class="box">
+                    <img src="arvore-seca-pequena.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Minha Árvore</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-seca-pequena.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Aristóteles de Estagira</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-pequena-amarela.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Kong Fuzi</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-grande-amarelarosa.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>René Descartes</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-seca-grande.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Immanuel Kant</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-rosa-grande.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Platão</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-pequena-azul.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Sócrates</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-grande-verde.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Baruch de Espinosa</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-grande-azul.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Friedrich Wilhelm Nietzsche</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="arvore-seca-pequena.png" alt="">
+                    <div class="overlay">
+                        <br><br>
+                        <h4>Jean-Jacques Rousseau</h4>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

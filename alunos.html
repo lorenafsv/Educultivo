@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <title>Educultivo - Lista de Alunos</title>
+    <style>
+
+        .botao-adicionar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .botao-remover {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .botao-editar {
+            background-color: #008CBA;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="body-img">
+    <header>
+        <div class="menu-content">
+            <h1 class="logo"> Educultivo </h1>
+            <nav class="header-menu">
+                <ul class="lista-items">
+                    <li><a href="minhas-florestas.html">Voltar</a></li>
+                    <li><a href="index.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p id="titulo-selecao">Alunos por Turma</p>
+            <br><br>
+            <label for="disciplina">Turma:</label>
+            <select id="disciplina">
+                <option value="matematica">Turma A</option>
+                <option value="portugues">Turma B</option>
+                <option value="historia">Turma C</option>
+            </select>
+            <br>
+            <button class="botao-adicionar" onclick="novaLista()">Nova Lista</button>
+            <br><br><br><br>
+            <table id="tabelaAlunos">
+                <thead>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <tr>
+                        <td>Aristóteles de Estagira</td>
+                        <td>
+                            <button class="botao-editar" onclick="editarAluno(0)">Editar</button>
+                            <button class="botao-remover" onclick="removerAluno(0)">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kong Fuzi</td>
+                        <td>
+                            <button class="botao-editar" onclick="editarAluno(1)">Editar</button>
+                            <button class="botao-remover" onclick="removerAluno(1)">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>René Descartes</td>
+                        <td>
+                            <button class="botao-editar" onclick="editarAluno(2)">Editar</button>
+                            <button class="botao-remover" onclick="removerAluno(2)">Remover</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button class="botao-adicionar" onclick="adicionarAluno()">Adicionar Aluno</button>
+        </div>
+    </main>
+    <script>
+        let alunos = ["Aristóteles de Estagira", "Kong Fuzi	", "René Descartes"]; 
+
+        function adicionarAluno() {
+            let nome = prompt("Digite o nome do aluno:");
+            if (nome) {
+                let confirmacao = confirm("Tem certeza que deseja adicionar " + nome + " à lista?");
+                if (confirmacao) {
+                    alunos.push(nome);
+                    atualizarTabela();
+                }
+            }
+        }
+
+        function removerAluno(indice) {
+            let confirmacao = confirm("Tem certeza que deseja remover " + alunos[indice] + " da lista?");
+            if (confirmacao) {
+                alunos.splice(indice, 1);
+                atualizarTabela();
+            }
+        }
+
+        function editarAluno(indice) {
+            let novoNome = prompt("Digite o novo nome do aluno:", alunos[indice]);
+            if (novoNome) {
+                alunos[indice] = novoNome;
+                atualizarTabela();
+            }
+        }
+
+        function novaLista() {
+            alunos = [];
+            atualizarTabela();
+        }
+
+        function atualizarTabela() {
+            let corpoTabela = document.getElementById("corpoTabela");
+            corpoTabela.innerHTML = "";
+            alunos.forEach((aluno, indice) => {
+                let linha = document.createElement("tr");
+                let celulaNome = document.createElement("td");
+                celulaNome.textContent = aluno;
+                let celulaAcoes = document.createElement("td");
+                let botaoEditar = document.createElement("button");
+                botaoEditar.textContent = "Editar";
+                botaoEditar.className = "botao-editar";
+                botaoEditar.onclick = function() { editarAluno(indice) };
+                let botaoRemover = document.createElement("button");
+                botaoRemover.textContent = "Remover";
+                botaoRemover.className = "botao-remover";
+                botaoRemover.onclick = function() { removerAluno(indice) };
+                celulaAcoes.appendChild(botaoEditar);
+                celulaAcoes.appendChild(botaoRemover);
+                linha.appendChild(celulaNome);
+                linha.appendChild(celulaAcoes);
+                corpoTabela.appendChild(linha);
+            });
+        }
+    </script>
+</body>
+</html>

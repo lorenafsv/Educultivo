@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <title>Educultivo - Minha Árvore</title>
+    <style>
+        .minha-arvore {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .minha-arvore img {
+            max-width: 500px;
+            max-height: 500px;
+            border-radius: 20px; 
+        }
+
+        .minha-arvore button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            position: relative; 
+        }
+
+        .minha-arvore button:hover {
+            background-color: #45a049;
+        }
+
+        .alerta {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            display: none;
+            border: 2px solid #4CAF50; 
+            color: #4CAF50; 
+            font-weight: bold;
+        }
+
+        .icone-exclamacao {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .popup-content {
+            background: url('fundolimpo.jpg');
+            padding: 40px; 
+            border-radius: 10px; 
+            overflow: auto; 
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #4caf50;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .opcao{
+            max-width: 200px;
+            border-radius: 20px; 
+            margin: 5px; 
+            border: 2px solid #4CAF50; 
+        }      
+    </style>
+</head>
+<body class="body-professor">
+    <header>
+        <div class="menu-content">
+            <h1 class="logo-professor"> Educultivo </h1>
+            <nav class="header-menu">
+                <ul class="lista-items">
+                    <li><a href="minhas-disciplinas.html">Voltar</a></li>
+                    <li><a href="qualevoce.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <p id="titulo-professor2"> Minha Arvore: <br>Matematica</p>
+    <br>
+    <div class="minha-arvore">
+        <img id="minha-arvore" src="arvore-seca-pequena.png" alt="Árvore do Aluno">
+        <br>
+        <button onclick="regar()">Regar <span class="icone-exclamacao" id="icone-regar">!</span></button>
+        <button style="margin-left: 30px;" onclick="nutrir()">Nutrir <span class="icone-exclamacao" id="icone-nutrir">!</span></button>
+        <button style="margin-left: 30px;" onclick="mostrarDetalhes()">Detalhes</button>
+        <button style="margin-left: 30px;" onclick="mostrarPopupArvores()">Escolher Árvore</button>
+        <p><div class="alerta" id="alerta">Água disponível para a sua árvore!</div></p>
+    </div>   
+
+    <div id="detalhesPopup" class="popup">
+        <div class="popup-content">
+            <h2>Detalhes do Aluno</h2>
+            <h3>Notas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Prova 1</th>
+                        <th>Nota 1</th>
+                        <th>Prova 2</th>
+                        <th>Nota 2</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matemática</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>15</td>
+                        <td>12,5</td>
+                        <td>20,5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Frequência</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matéria</th>
+                        <th>Aulas</th>
+                        <th>Presenças</th>
+                        <th>Faltas</th>
+                        <th>Frequência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matemática</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>83%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="close" onclick="fecharDetalhes()">x</div>
+    </div>                
+
+    <div id="popupArvores" class="popup">
+        <div class="popup-content">
+            <h2>Escolher Árvore</h2>
+            <img class="opcao" src="arvore-grande-amarela.png" onclick="trocarArvore('arvore-grande-amarela.png')">
+            <img class="opcao" src="arvore-grande-azul.png" onclick="trocarArvore('arvore-grande-azul.png')">
+            <img class="opcao" src="arvore-grande-rosa.png" onclick="trocarArvore('arvore-grande-rosa.png')">
+            <img class="opcao" src="arvore-grande-rosaclaro.png" onclick="trocarArvore('arvore-grande-rosaclaro.png')">
+            <img class="opcao" src="arvore-grande-verde.png" onclick="trocarArvore('arvore-grande-verde.png')">
+            <img class="opcao" src="arvore-grande-brancaverde.png" onclick="trocarArvore('arvore-grande-brancaverde')">
+        </div>
+        <div class="close" onclick="fecharPopupArvores()">x</div>
+    </div> 
+
+    <script>
+        document.getElementById('alerta').innerHTML = 'Água disponível para a sua árvore!';
+        document.getElementById('alerta').style.display = 'block';
+        function regar() {
+            var novaImagem = "arvore-pequena-amarela.png";
+            document.getElementById('minha-arvore').src = novaImagem;
+            document.getElementById('alerta').innerHTML = 'Nutrientes disponíveis para a sua árvore!';
+            document.getElementById('alerta').style.display = 'block';
+            document.getElementById('icone-regar').style.display = 'none'; 
+        }
+
+        function nutrir() {
+            var novaImagem = "arvore-grande-amarela.png";
+            document.getElementById('minha-arvore').src = novaImagem;
+            document.getElementById('alerta').style.display = 'none';
+            document.getElementById('icone-nutrir').style.display = 'none'; 
+        }
+
+        function mostrarDetalhes() {
+            document.getElementById("detalhesPopup").style.display = "block";
+        }
+
+        function fecharDetalhes() {
+            document.getElementById("detalhesPopup").style.display = "none";
+        }
+
+        function mostrarPopupArvores() {
+            document.getElementById("popupArvores").style.display = "block";
+        }
+
+        function fecharPopupArvores() {
+            document.getElementById("popupArvores").style.display = "none";
+        }
+
+        function trocarArvore(novaArvore) {
+            document.getElementById("minha-arvore").src = novaArvore;
+            fecharPopupArvores();
+        }
+    </script>
+</body>
+</html>

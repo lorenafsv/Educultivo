@@ -1,0 +1,927 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Fibre';
+    src: url('fibre-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Zerar CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo da tela */
+html {
+    width: 100vw;
+    height: 100vh;
+    color: #324842;
+}
+
+.body-principal {
+    background: linear-gradient(rgba(17, 17, 17, 0.1), rgba(20, 20, 20, 0.3)), url(fundohome.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100%; 
+}
+
+.body-img {
+    background: linear-gradient(rgba(17, 17, 17, 0.1), rgba(20, 20, 20, 0.3)), url('fundolimpo.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat; 
+    height: 100%;
+    width: 100%;
+}
+
+
+
+body {
+    
+    background-position: center center;
+    background-size: cover;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    
+}
+
+p#titulos{
+     
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #31B404;
+    letter-spacing: 0.2rem;
+}
+
+/* Menu - Header */
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(22, 22, 22, 0.5);
+}
+
+.menu-content {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.logo {
+    font-size: 2.2rem;
+    letter-spacing: 0.3rem;
+    cursor: pointer;
+    color: #324842;
+    font-family: 'Fibre';
+    margin-top: 1rem;
+}
+
+.menu-content .lista-items {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-content .lista-items a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transition: 2ms ease-in;
+    position: relative;
+}
+
+.menu-content .lista-items a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 11px;
+    left: 0px;
+    width: 0px;
+    height: 4px;
+    background-color: #324842;
+    transition: all 1.5s ease;
+}
+
+.menu-content .lista-items a:hover:before {
+    width: 100%;
+
+}
+
+/* Centro - Contrudo Principal */
+main {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17rem;
+}
+
+/* texto principal */
+.titulo-textoprincipal{
+    font-family: 'Fibre';
+    font-size: 6rem;
+}
+
+.texto-principal {
+    width: 700px;
+    font-size: 2.0rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* botoes - home */
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.botoes button {
+    width: 220px;
+    height: 60px;
+    cursor: pointer;
+    color: #889F91;
+    text-transform: uppercase;
+    background-color: #324842;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+    font-size: 1.5rem;
+    border: none;
+    text-align: center;
+}
+
+.botoes button:hover{
+    color: #FFF;
+}
+
+/* ----- CSS DA PAGINA CONTATO ----- */
+.contato-content {
+    background-color: rgba(22, 22, 22, 1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 30%;
+    overflow: auto;
+}
+
+.contato-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+legend {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #31B404;
+}
+
+.span-required{
+    display: none;
+}
+
+.inputs{
+    padding: 8px 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.inputs:focus{
+    border-color: #31B404;
+}
+
+.box-select{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    gap: 1rem;
+}
+
+button[type="submit"]{
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: #31B404;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    transition: 1.5s;
+}
+
+button[type="submit"]:hover{
+    background-color: #0d3300
+}    
+
+textarea {
+    padding: 8px 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+textarea:focus{
+    border-color: #31B404;
+}
+
+
+/* Pagina Frequencia */
+.produto-content{
+    background-color: rgba(22, 22, 22, 0.5);
+    margin: auto;
+    width: 85vh;
+    height: 70vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    width: 600px;
+    border-collapse: collapse;
+    background-color: #FFF;
+}
+
+td{
+    border: 1px solid black;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.nota-freq{
+    text-align: center;
+}
+
+.head-freq{
+    text-align: center;
+    color: white;
+    background-color: #737373;
+    font-size: 20px;
+    
+}
+
+/*Pagina frequencia */
+.produto-content{
+    background-color: rgba(22, 22, 22, 0.5);
+    margin: auto;
+    width: 85vh;
+    height: 70vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    width: 600px;
+    border-collapse: collapse;
+    background-color: #FFF;
+}
+
+tr{
+    font-size: 15px;
+}
+
+.nota-notas{
+    text-align: center;
+}
+
+.head-notas{
+    text-align: center;
+    color: white;
+    background-color: #4c956c;
+    font-size: 20px;
+}
+
+
+
+
+/* Pagina quem somos? */
+p#titulo-quem{
+     
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 5rem;
+    color: #0d3300;
+    letter-spacing: 0.2rem;
+    font-family: 'Fibre';
+}
+
+.quem-content {
+    background-color: #324842;
+    margin: auto;
+    width: 80vh;
+    height: 45vh;
+    border-radius: 80px 0px 80px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p#texto-quem {
+    color: #889F91;
+    font-size: 16px;
+    text-indent: 5rem;
+    text-align: justify;
+    width: 500px;
+}
+
+/* PAGINA SELECAO PROFESSOR/ALUNO */
+.selecao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selecao img{
+    max-width: 370px;
+}
+
+p#titulo-selecao{    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #0d3300;
+    letter-spacing: 0.2rem;
+    font-family: 'Fibre';
+}
+
+.selecao-content {
+    background-color: rgba(22, 22, 22, 0.5);
+    margin: auto;
+    width: 60vh;
+    height: 50vh;
+    border-radius: 80px 0px 80px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botoes-selecao {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 2rem;
+}
+
+.botoes-selecao button {
+    width: 120px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.botoes-selecao button:hover{
+    border: none;
+}
+
+.botoes-selecao button:before{
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: #889F91;
+    z-index: -1;
+    transition: 1s;
+}
+
+.botoes-selecao button:hover:before{
+    width: 100%;
+}
+
+/* PAGINA LOGIN ALUNO */
+.aluno-content{
+    background-color: transparent;
+    margin: auto;
+    width: 85vh;
+    height: 70vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-aluno{
+    width: 320px;
+    height: 430px;
+    border: 2px solid #000;
+    border-radius: 80px 0px 80px 0px;
+    color: #FFF;
+    background-color: rgba(0, 0, 5, 0.8);
+    top:58%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px;
+}
+
+.user-aluno{
+    position: absolute;
+    top: -50px;
+    left: 112px;
+}
+
+h1{
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+}
+
+.login-aluno p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.login-aluno input{
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.login-aluno input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.botao-entrar {
+    background-color: #4CAF50; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer; 
+    font-size: 16px; 
+    text-decoration: none; 
+    margin: auto; 
+    display: block; 
+}
+
+
+.login-aluno input[type="submit"]:hover{
+    cursor: pointer;
+    background: #0d3300;
+    transition: 0.2s;
+}
+
+.login-aluno a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #4b4b4b;
+    transition: 0.2s;
+}
+
+.login-aluno a:hover{
+    transition: 0.2s;
+    color: white;
+    
+}
+
+/* PAGINA LOGIN PROFESSOR */
+.professor-content{
+    background-color: transparent;
+    margin: auto;
+    width: 85vh;
+    height: 70vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-professor{
+    width: 320px;
+    height: 430px;
+    border: 2px solid #000;
+    border-radius: 80px 0px 80px 0px;
+    color: #FFF;
+    background-color: rgba(0, 0, 5, 0.8);
+    top:58%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px;
+}
+
+.user-professor{
+    position: absolute;
+    top: -50px;
+    left: 112px;
+}
+
+.login-professor p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.login-professor input{
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.login-professor input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.login-professor input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 35px;
+    color: white;
+    background: #27372e;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.login-professor input[type="submit"]:hover{
+    cursor: pointer;
+    background: #0d3300;
+    transition: 0.2s;
+}
+
+.login-professor a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #4b4b4b;
+    transition: 0.2s;
+}
+
+.login-professor a:hover{
+    transition: 0.2s;
+    color: white;
+
+}
+
+/*pagina minhas arvores / professor */
+.body-professor {
+    background: linear-gradient(rgba(17, 17, 17, 0.1), rgba(20, 20, 20, 0.3)), #496358;
+    background-position: center center;
+    background-size: cover;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    
+}
+
+.logo-professor {
+    font-size: 2.2rem;
+    letter-spacing: 0.3rem;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Fibre';
+    margin-top: 1rem;
+}
+
+p#titulo-professor2{
+     
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #bbc3b8;
+    letter-spacing: 0.2rem;
+    font-family: 'Fibre';
+    
+}
+
+.titulo-cards{
+    color: #bbc3b8;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10;
+}
+
+.wrapper{
+    padding: 10px 10%;
+}
+
+#card-area{
+    padding: 50px 0;
+}
+
+.box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.box{
+    width: 300px;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.box img{
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: poppins;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.overlay a{
+    margin-top: 10px;
+    color: #547061;
+    text-decoration: none;
+    font-size: 14px;
+    background: #bbc3b8;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    
+}
+
+.box:hover img{
+    transform: scale(1.2);
+    border-radius: 10px;  
+}
+
+.box:hover .overlay{
+    height: 100%;
+}
+
+/* Estilo do formulário de cadastro */
+.login-cadastro {
+    width: 700px; 
+    height: 590px;
+    margin-left: 0%; 
+    background-color: rgba(0, 0, 5, 0.8); 
+    padding: 35px 45px;
+    border-radius: 80px 0px 80px 0px; 
+    color: #FFF;
+}
+
+
+/* Estilo dos inputs e botão */
+.login-cadastro input[type="text"],
+.login-cadastro input[type="password"] {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 27px;
+    color: white;
+    font-size: 16px;
+}
+
+.login-cadastro input[type="submit"] {
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    text-decoration: none; 
+    margin: auto; 
+    display: block; 
+}
+
+.login-cadastro input[type="submit"]:hover {
+    cursor: pointer;
+    background: #185b01;
+    transition: 0.2s;
+}
+
+.tabela{
+    width: 900px; 
+    border-collapse: collapse;
+}
+th, td {
+    padding: 6px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border:  1px solid black;
+}
+
+select {
+    width: 100%;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: auto; 
+    display: block; 
+}
+
+th {
+    text-align: center;
+    background-color: #f2f3ed;
+    border:  1px solid black;
+}
+
+.box img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.floresta img{
+    width: 800px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.floresta{
+    text-align: center;
+}
+
+.esqueci-content{
+    background-color: transparent;
+    margin: auto;
+    width: 85vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-esqueci{
+    width: 320px;
+    height: 320px;
+    border: 2px solid #000;
+    border-radius: 80px 0px 80px 0px;
+    color: #FFF;
+    background-color: rgba(0, 0, 5, 0.8);
+    top:58%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px;
+}
+
+.user-esqueci{
+    position: absolute;
+    top: -50px;
+    left: 112px;
+}
+
+.login-esqueci p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.login-esqueci input{
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.login-esqueci input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.botao-entrar {
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    text-decoration: none; 
+    margin: auto; 
+    display: block; 
+}
+
+
+.login-esqueci input[type="submit"]:hover{
+    cursor: pointer;
+    background: #0d3300;
+    transition: 0.2s;
+}
+
+.login-esqueci a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #4b4b4b;
+    transition: 0.2s;
+}
+
+.login-esqueci a:hover{
+    transition: 0.2s;
+    color: white;
+    
+}
+
+
